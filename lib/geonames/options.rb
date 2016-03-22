@@ -1,5 +1,3 @@
-require 'yaml'
-
 module GeoNames
   def self.configure(options)
     GeoNames::OPTIONS.merge!(options)
