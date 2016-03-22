@@ -1,4 +1,4 @@
-# GeoNames API wrapper
+# GeoNames API
 
 The GeoNames geographical database covers all countries and contains over eight
 million placenames that are available for download free of charge.
@@ -16,7 +16,7 @@ This library depends on addressable, you can install it with
 
 Instantiate the API and make a query:
 
-    >> api = GeoNames.new
+    >> api = GeoNames::API.new
     >> api.ocean(lat: 0, lng: 0)
     => {"name"=>"North Atlantic Ocean"}
 
