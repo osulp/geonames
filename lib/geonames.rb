@@ -7,19 +7,12 @@ module GeoNames
   class API
     class APIError < RuntimeError; end
 
-    OPTIONS = {
-      host: 'api.geonames.org',
-      time_format: '%Y-%m-%d %T %z',
-      timezone: 'UTC',
-      username: nil,
-    }
-
     QUERY = {}
 
     attr_reader :options, :uris
 
     def initialize(options = {})
-      @options = OPTIONS.merge(options)
+      @options = GeoNames::OPTIONS.merge(options)
       @uris = Hash[QUERY.map{|name, args|
         if args.empty?
           template = Addressable::Template.new(

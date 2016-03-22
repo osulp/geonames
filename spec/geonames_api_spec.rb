@@ -1,7 +1,11 @@
 require 'spec_helper'
+require 'geonames/options'
 
 describe GeoNames::API do
-  subject { GeoNames::API.new }
+  subject {
+    GeoNames.configure(options)
+    GeoNames::API.new
+  }
   let(:options) {
     {
       host: 'api.geonames.org',

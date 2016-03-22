@@ -14,7 +14,20 @@ This library depends on addressable, you can install it with
 
 ## Usage
 
-Instantiate the API and make a query:
+GeoNames module has to be configured with a hash of options, especially for the
+purpose of setting the api `username`. If this gem is used in a Rails
+application, it may be best to configure and initialize GeoNames in
+`config/application.rb`. Configure GeoNames like so:
+
+    GeoNames.configure({ 
+      :username => 'myusernamehere',
+      :host => 'api.geonames.org',
+      :time_format => '%Y-%m-%d %T %z',
+      :timezone => 'UTC'
+    })
+
+Instantiate the API and make a query, using the options that were set during
+`configure`:
 
     >> api = GeoNames::API.new
     >> api.ocean(lat: 0, lng: 0)
