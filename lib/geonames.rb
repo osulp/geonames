@@ -2,6 +2,7 @@ require 'json'
 require 'open-uri'
 require 'addressable/template'
 require 'geonames/version'
+require 'geonames/options'
 
 module GeoNames
   class API
