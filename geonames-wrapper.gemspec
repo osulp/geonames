@@ -1,9 +1,11 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'geonames/version'
 
 Gem::Specification.new do |s|
   s.name        = "geonames-wrapper"
-  s.version     = "1.0.1"
+  s.version     = GeoNames::VERSION
   s.summary     = "GeoNames JSON Web Service Wrapper"
   s.description = "Bare-metal wrapper for GeoNames JSON Web Service API. Simple and effective."
 

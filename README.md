@@ -23,6 +23,12 @@ Instantiate the API and make a query:
 Please read the documentation of the methods in the GeoNames class for more
 information about the available methods and their arguments.
 
+## RSpec
+
+The specs depend on having a valid geonames API username set in an environment
+variable called `GEONAMES_API_USER`. Run the specs like so:
+
+    $GEONAMES_API_USER=myusername rake
 
 ## About
 
